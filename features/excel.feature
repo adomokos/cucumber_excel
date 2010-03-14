@@ -10,7 +10,7 @@ Feature: Modify values in the Excel sheet
   Scenario: Display column headers and captions
     Given the default values were loaded
     When I open the Excel workbook
-    Then I should see "CategoryABC" in the "A1" cell
+    Then I should see "Category" in the "A1" cell
      And I should see "Value Total" in the "B1" cell
      And I should see "Value1" in the "C1" cell
      And I should see "Value2" in the "D1" cell
