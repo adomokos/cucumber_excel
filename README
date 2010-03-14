@@ -1,1 +1,5 @@
 Source code for my blog post: Testing Excel with Cucumber
+
+Please copy the lib\TestWorkbook.xlsx file into your C:\Temp folder.
+
+You'll need cucumber and rpsec gems installed to run the examples.
