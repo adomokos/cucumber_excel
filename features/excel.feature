@@ -38,5 +38,5 @@ Feature: Modify values in the Excel sheet
 		
     Examples:
     | child1_value | category_value1 | child1_sum | category_total | value1_total |
-    | 211          | 453             |  558       | 1623           | 1281         |
+    | 211          | 453             | 558       | 1623           | 1281         |
     | 51           | 293             | 398        | 1463           | 1121         |  
