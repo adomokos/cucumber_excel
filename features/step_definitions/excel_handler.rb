@@ -1,25 +1,25 @@
 class ExcelHandler
   include Singleton
 	
-	# set this to your Excel file path
-	@@excel_file_path = 'C:\Temp\TestWorkbook.xlsx'
+  # set this to your Excel file path
+  @@excel_file_path = 'C:\Temp\TestWorkbook.xlsx'
 
-	def open_excel
-		begin
+  def open_excel
+    begin
       @excel = WIN32OLE.connect('excel.application')			
       @wb = @excel.ActiveWorkbook
-		rescue
+    rescue
       @excel = WIN32OLE::new("excel.application")				
-			@excel.visible =true
-	    @wb = @excel.Workbooks.Open(@@excel_file_path )
-	  end	
+      @excel.visible =true
+	  @wb = @excel.Workbooks.Open(@@excel_file_path )
+	end	
   end
 	
-	def worksheet
+  def worksheet
     @wb.worksheets(1)
   end
 	
-	def close_excel    
+  def close_excel    
     kill_excel
   end
 	
