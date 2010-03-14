@@ -12,8 +12,8 @@ end
 
 When /^I open the Excel workbook$/ do
   ExcelHandler.instance.open_excel
-	@worksheet = ExcelHandler.instance.worksheet
-	@worksheet.extend CellValueGetter
+  @worksheet = ExcelHandler.instance.worksheet
+  @worksheet.extend CellValueGetter
 end
 
 When /^I put (\d+) in the "([^\"]*)" cell$/ do |value, cell|
@@ -34,17 +34,17 @@ end
 
 module CellValueGetter
   def get_cell_value(cell)
-		get_cell(cell).value
-	end
+    get_cell(cell).value
+  end
 	
-	def set_cell_value(cell, value)
-			get_cell(cell).value = value
-	end
+  def set_cell_value(cell, value)
+    get_cell(cell).value = value
+  end
 	
-	def get_cell(cell)
-		cell_values = cell.split('')
-		cell_values.length.should == 2
-		cells(cell_values[1].to_i, cell_values[0])
-	end
+  def get_cell(cell)
+    cell_values = cell.split('')
+    cell_values.length.should == 2
+    cells(cell_values[1].to_i, cell_values[0])
+  end
 	
 end
